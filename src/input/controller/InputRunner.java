@@ -8,6 +8,5 @@ public class InputRunner
 		//myThing.Start();
 		PopupController myInput = new PopupController();
 		myInput.start();
-		
 	}
 }
