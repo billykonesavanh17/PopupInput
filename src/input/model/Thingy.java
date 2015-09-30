@@ -11,6 +11,9 @@ public class Thingy
 	private int age;
 	private double weight;
 	
+	/**
+	 * 
+	 */
 	public Thingy()
 	{
 		name = "";
@@ -18,6 +21,12 @@ public class Thingy
 		weight = -.008;
 	}
 	
+	/**
+	 * 
+	 * @param name
+	 * @param age
+	 * @param weight
+	 */
 	public Thingy(String name, int age, double weight)	
 	{
 		//this. refers to the current instance of this object (A thingy)

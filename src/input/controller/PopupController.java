@@ -2,6 +2,7 @@ package input.controller;
 
 import input.view.PopupDisplay;
 import input.model.Thingy;
+
 public class PopupController
 {
 	private PopupDisplay myPopups;
@@ -39,6 +40,11 @@ public class PopupController
 		
 		String tempWeight = myPopups.grabAnswer("Type in your weight");
 		double myWeight;
+		
+		while(!isDouble(tempWeight))
+		{
+			tempWeight = myPopups.grabAnswer("Type in a positive integer for your weight!");
+		}
 		
 		if(isDouble(tempWeight))
 		{
@@ -81,7 +87,7 @@ public class PopupController
 		}
 		catch(NumberFormatException error)
 		{
-			myPopups.showResponse("not an double - bad value will be used");
+			myPopups.showResponse("not a double - bad value will be used");
 		}
 				
 		return isDouble;
